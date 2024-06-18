@@ -21,6 +21,7 @@ class UpdateBlogRequest extends FormRequest
      */
     public function rules(): array
     {
+        dd(request());
         return [
              'title' => ['required', 'max:255', 'string', 'unique:blogs,title,except' . request()->get('id')],
             'body' => ['required'],

@@ -34,7 +34,9 @@
 
                         {{-- Comments --}}
                         <div class="block relative mt-5">
-                            <div class="font-semibold mt-10 relative block">Comments</div>
+                            <div class="font-semibold mt-10 relative block uppercase text-lg">Comments</div>
+
+                            @include('blog.comments.form')
                             @forelse ($comments as $comment )
 
 

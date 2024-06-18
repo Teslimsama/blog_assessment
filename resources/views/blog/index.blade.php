@@ -1,6 +1,6 @@
 @foreach ($blogs as $blog)
     <article class="flex gap-2 flex-col bg-white shadow-md">
-        <img src="{{ $blog->featured_image }}" class="bg-red-200 w-full h-[200px] object-cover" alt="{{ $blog->title }}">
+        <img src="{{ $blog->thumbnail->url }}" class="bg-red-200 w-full h-[200px] object-cover" alt="{{ $blog->title }}">
         <div class="flex flex-col p-2">
             <span class="font-semibold text-lg capitalize"> {{ $blog->title }} </span>
 
