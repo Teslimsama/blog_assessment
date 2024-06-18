@@ -40,7 +40,7 @@
                             @forelse ($comments as $comment )
 
 
-                                <div class="flex flex-col bg-gray-200 mb-1 p-2">
+                                <div class="flex flex-col mb-1 p-2">
 
                                     <div class="flex justify-between">
 
