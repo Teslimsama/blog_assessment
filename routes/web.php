@@ -31,6 +31,9 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/admin/dashboard', function () {
     return Redirect::route('blog.admin.index');
 });
+Route::get('/admin', function () {
+    return Redirect::route('blog.admin.index');
+});
 
 
 Route::get('blog', [FrontEndBlogController::class, 'index'])->name('blog.index');

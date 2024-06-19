@@ -21,11 +21,11 @@ class UpdateBlogRequest extends FormRequest
      */
     public function rules(): array
     {
-        dd(request());
         return [
-             'title' => ['required', 'max:255', 'string', 'unique:blogs,title,except' . request()->get('id')],
+            'title' => ['required', 'max:255', 'string', 'unique:blogs,title,' . intval(request()->route('blog'))],
             'body' => ['required'],
-            'featured_image' => ['required', 'file', 'mimes:png,jpg,jpeg,svg,gif', 'max:20000']
+            'featured_image' => ['sometimes', 'nullable', 'file', 'mimes:png,jpg,jpeg,svg,gif', 'max:20000']
         ];
     }
+
 }
